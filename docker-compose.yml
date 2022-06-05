@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  postgres_first:
+    image: postgres:14.3
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5435:5432'
+    expose:
+      - '5435'
+
+  postgres_second:
+    image: postgres:14.3
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5433:5432'
+    expose:
+      - '5433'
+
+  postgres_third:
+    image: postgres:14.3
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5434:5432'
+    expose:
+      - '5434'
